@@ -10,10 +10,28 @@ import SwiftUI
 
 struct Shapes: View {
     var body: some View {
-        Heart()
-            .stroke(style: StrokeStyle(lineWidth: 10, lineCap: .round))
+        Chevron()
+            .stroke(style: StrokeStyle(lineWidth: 10))
         .padding()
     }
+}
+
+struct Chevron: Shape {
+    func path(in rect: CGRect) -> Path {
+        Path { path in
+            path.addLines([
+                .zero,
+                CGPoint(x: rect.width * 0.75, y: 0),
+                CGPoint(x: rect.width, y: rect.height * 0.5),
+                CGPoint(x: rect.width * 0.75, y: rect.height),
+                CGPoint(x: 0, y: rect.height),
+                CGPoint(x: rect.width * 0.25, y: rect.height * 0.5),
+            ])
+            path.closeSubpath()
+        }
+    }
+    
+    
 }
 
 struct Heart: Shape {
