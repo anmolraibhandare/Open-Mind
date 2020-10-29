@@ -8,6 +8,47 @@
 
 import SwiftUI
 
+struct AnyShape: Shape {
+    private let path: (CGRect) -> Path
+    
+    init<T: Shape>(_ shape: T){
+        path = { rect in
+            return shape.path(in: (rect))
+        }
+    }
+    func path(in rect: CGRect) -> Path {
+        return path(rect)
+    }
+}
+enum ShapeType: CaseIterable {
+    case rectangle
+    case ellipse
+    case diamond
+    case chevron
+    case heart
+    case roundedRect
+    case empty
+    
+    
+    var shape: some Shape {
+        switch self {
+        case .rectangle: return Rectangle().anyShape()
+        case .ellipse: return Ellipse().anyShape()
+        case .diamond: return Diamond().anyShape()
+        case .chevron: return Chevron().anyShape()
+        case .heart: return Heart().anyShape()
+        case .roundedRect: return RoundedRectangle(cornerRadius: 30).anyShape()
+        case .empty: return Path().anyShape()
+        }
+    }
+}
+
+extension Shape {
+    func anyShape() -> AnyShape {
+        return AnyShape(self)
+    }
+}
+
 struct Shapes: View {
     var body: some View {
         Chevron()
@@ -54,6 +95,23 @@ struct Heart: Shape {
         path.addPath(path, transform: transform)
         
         return path
+    }
+}
+
+struct Diamond: Shape {
+    func path(in rect: CGRect) -> Path {
+        Path { path in
+            let width = rect.width
+            let height = rect.height
+            
+            path.addLines([
+                CGPoint(x: width / 2, y: 0),
+                CGPoint(x: width, y: height / 2),
+                CGPoint(x: width / 2, y: height),
+                CGPoint(x: 0, y: height / 2 )
+            ])
+            path.closeSubpath()
+        }
     }
 }
 
