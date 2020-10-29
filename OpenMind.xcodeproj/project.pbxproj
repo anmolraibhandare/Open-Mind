@@ -15,6 +15,9 @@
 		26780627254A25E30088A976 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 26780625254A25E30088A976 /* LaunchScreen.storyboard */; };
 		26780631254B465F0088A976 /* Shapes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26780630254B465F0088A976 /* Shapes.swift */; };
 		26780633254B50C40088A976 /* ShapeGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26780632254B50C40088A976 /* ShapeGridView.swift */; };
+		26780635254B58A10088A976 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26780634254B58A10088A976 /* Model.swift */; };
+		26780637254B59EF0088A976 /* CellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26780636254B59EF0088A976 /* CellView.swift */; };
+		26780639254B5B190088A976 /* BackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26780638254B5B190088A976 /* BackgroundView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +31,9 @@
 		26780628254A25E30088A976 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		26780630254B465F0088A976 /* Shapes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shapes.swift; sourceTree = "<group>"; };
 		26780632254B50C40088A976 /* ShapeGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShapeGridView.swift; sourceTree = "<group>"; };
+		26780634254B58A10088A976 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		26780636254B59EF0088A976 /* CellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellView.swift; sourceTree = "<group>"; };
+		26780638254B5B190088A976 /* BackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +70,9 @@
 				2678061C254A25DE0088A976 /* SceneDelegate.swift */,
 				2678061E254A25DE0088A976 /* ContentView.swift */,
 				26780630254B465F0088A976 /* Shapes.swift */,
+				26780634254B58A10088A976 /* Model.swift */,
+				26780638254B5B190088A976 /* BackgroundView.swift */,
+				26780636254B59EF0088A976 /* CellView.swift */,
 				26780632254B50C40088A976 /* ShapeGridView.swift */,
 				26780620254A25E30088A976 /* Assets.xcassets */,
 				26780625254A25E30088A976 /* LaunchScreen.storyboard */,
@@ -154,9 +163,12 @@
 			files = (
 				2678061B254A25DE0088A976 /* AppDelegate.swift in Sources */,
 				2678061D254A25DE0088A976 /* SceneDelegate.swift in Sources */,
+				26780639254B5B190088A976 /* BackgroundView.swift in Sources */,
 				26780633254B50C40088A976 /* ShapeGridView.swift in Sources */,
+				26780635254B58A10088A976 /* Model.swift in Sources */,
 				2678061F254A25DE0088A976 /* ContentView.swift in Sources */,
 				26780631254B465F0088A976 /* Shapes.swift in Sources */,
+				26780637254B59EF0088A976 /* CellView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
