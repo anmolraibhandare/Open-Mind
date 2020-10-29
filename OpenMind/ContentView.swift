@@ -14,7 +14,9 @@ struct ContentView: View {
     @State private var showShapes = false
     
     var body: some View {
-        BackgroundView()
+        GeometryReader { geometry in
+            BackgroundView(size: geometry.size)
+        }
     }
 }
 

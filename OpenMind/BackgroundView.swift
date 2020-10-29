@@ -12,11 +12,20 @@ struct BackgroundView: View {
     
     @EnvironmentObject var cellData: CellData
     
-    
+    let size: CGSize
     var body: some View {
+        let doubleTapDrag = DragGesture(minimumDistance: 0)
         let doubleTap = TapGesture(count: 2)
-            .onEnded {
-                print("Double Tap")
+        .sequenced(before: doubleTapDrag)
+        .onEnded {  value in
+            switch value {
+            case .second((), let drag):
+                if let drag = drag {
+                    print("add new cell at: ", drag.location)
+                    self.newCell(location: drag.location)
+                }
+            default: break
+            }
         }
         return ZStack{
             Color.yellow
@@ -31,11 +40,19 @@ struct BackgroundView: View {
             self.endTextEditing()
         }
     }
+    
+    func newCell(location: CGPoint){
+        let offsetX = location.x - size.width / 2
+        let offsetY = location.y - size.height / 2
+        let offset = CGSize(width: offsetX, height: offsetY)
+        let cell = cellData.addCell(offset: offset)
+        cellData.selectedCell = cell
+    }
 }
 
 struct BackgroundView_Previews: PreviewProvider {
     static var previews: some View {
-        BackgroundView()
+        BackgroundView(size: CGSize(width: 400, height: 800))
         .environmentObject(CellData())
     }
 }

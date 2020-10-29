@@ -40,4 +40,10 @@ class CellData: ObservableObject {
         }
         return index
     }
+    
+    func addCell(offset: CGSize) -> Cell {
+        let cell = Cell(offset: offset)
+        cells.append(cell)
+        return cell
+    }
 }
