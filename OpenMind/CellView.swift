@@ -16,6 +16,11 @@ struct CellView: View {
     @State private var offset: CGSize = .zero
     @State private var currentOffset: CGSize = .zero
     
+    static var crayonImage: Image {
+        let config = UIImage.SymbolConfiguration(pointSize: 60, weight: .medium, scale: .medium)
+        return Image(uiImage: UIImage(named: "crayon")!.withConfiguration(config))
+    }
+    
     var isSelected: Bool {
         cell == cellData.selectedCell
     }
