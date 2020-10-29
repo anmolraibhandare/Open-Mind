@@ -19,6 +19,7 @@
 		26780637254B59EF0088A976 /* CellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26780636254B59EF0088A976 /* CellView.swift */; };
 		26780639254B5B190088A976 /* BackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26780638254B5B190088A976 /* BackgroundView.swift */; };
 		2678063B254B64680088A976 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2678063A254B64680088A976 /* Extensions.swift */; };
+		2678063D254B6C840088A976 /* ColorSliderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2678063C254B6C840088A976 /* ColorSliderView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		26780636254B59EF0088A976 /* CellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellView.swift; sourceTree = "<group>"; };
 		26780638254B5B190088A976 /* BackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundView.swift; sourceTree = "<group>"; };
 		2678063A254B64680088A976 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		2678063C254B6C840088A976 /* ColorSliderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorSliderView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +75,7 @@
 				2678061E254A25DE0088A976 /* ContentView.swift */,
 				26780630254B465F0088A976 /* Shapes.swift */,
 				26780634254B58A10088A976 /* Model.swift */,
+				2678063C254B6C840088A976 /* ColorSliderView.swift */,
 				26780638254B5B190088A976 /* BackgroundView.swift */,
 				2678063A254B64680088A976 /* Extensions.swift */,
 				26780636254B59EF0088A976 /* CellView.swift */,
@@ -169,6 +172,7 @@
 				2678061D254A25DE0088A976 /* SceneDelegate.swift in Sources */,
 				26780639254B5B190088A976 /* BackgroundView.swift in Sources */,
 				26780633254B50C40088A976 /* ShapeGridView.swift in Sources */,
+				2678063D254B6C840088A976 /* ColorSliderView.swift in Sources */,
 				26780635254B58A10088A976 /* Model.swift in Sources */,
 				2678061F254A25DE0088A976 /* ContentView.swift in Sources */,
 				26780631254B465F0088A976 /* Shapes.swift in Sources */,
