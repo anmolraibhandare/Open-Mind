@@ -14,12 +14,25 @@ struct ContentView: View {
     
     var body: some View {
         
-        Button("Show Shapes"){
-            self.showShapes.toggle()
-        }
-        .sheet(isPresented: self.$showShapes) {
-            ShapeGridView()
-            .padding()
+        ZStack {
+            GeometryReader { geometryProxy in
+                
+                
+            
+                ZStack {
+                    Color.yellow
+                
+            Button("Show Shapes"){
+                self.showShapes.toggle()
+            }
+            .frame(height: geometryProxy.size.height / 2)
+            .background(Color.gray)
+            .sheet(isPresented: self.$showShapes) {
+                ShapeGridView()
+                .padding()
+            }
+                }
+            }
         }
     }
 }
