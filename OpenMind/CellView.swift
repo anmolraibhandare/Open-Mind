@@ -9,12 +9,27 @@
 import SwiftUI
 
 struct CellView: View {
+    @ EnvironmentObject var cellData: CellData
+    
     let cell: Cell
     @State private var text: String = ""
+    @State private var offset: CGSize = .zero
+    @State private var currentOffset: CGSize = .zero
     
+    var isSelected: Bool {
+        cell == cellData.selectedCell
+    }
     
     var body: some View {
-        ZStack{
+        let drag = DragGesture()
+            .onChanged { drag in
+                self.offset = self.currentOffset + drag.translation
+        }
+        .onEnded { drag in
+            self.offset = self.currentOffset + drag.translation
+            self.currentOffset = self.offset
+        }
+        return  ZStack{
             cell.shapeType.shape
                 .foregroundColor(.white)
             TextField("Enter cell text", text: $text)
@@ -22,14 +37,18 @@ struct CellView: View {
                 .lineLimit(nil)
                 .multilineTextAlignment(.center)
             cell.shapeType.shape
-                .stroke(cell.color, lineWidth: 3)
+                .stroke(isSelected ? Color.orange: cell.color, lineWidth: 3)
         }
         .frame(width: cell.size.width,
                height: cell.size.height)
-            .offset(cell.offset)
+            .offset(cell.offset + offset)
             .onAppear{
                 self.text = self.cell.text
         }
+        .onTapGesture {
+            self.cellData.selectedCell = self.cell
+        }
+        .simultaneousGesture(drag)
     }
 }
 
@@ -38,5 +57,6 @@ struct CellView_Previews: PreviewProvider {
         CellView(cell: Cell())
             .previewLayout(.sizeThatFits)
         .padding()
+        .environmentObject(CellData())
     }
 }

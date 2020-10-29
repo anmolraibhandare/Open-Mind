@@ -22,6 +22,8 @@ struct Cell: Identifiable, Equatable {
 }
 
 class CellData: ObservableObject {
+    @Published var selectedCell: Cell?
+    
     @Published var cells: [Cell] = [
         Cell(color: .red,
              text: "Drawing in SwiftUI"),

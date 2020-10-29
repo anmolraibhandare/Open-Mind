@@ -10,30 +10,11 @@ import SwiftUI
 
 struct ContentView: View {
     
+    @EnvironmentObject var cellData: CellData
     @State private var showShapes = false
     
     var body: some View {
-        
-        ZStack {
-            GeometryReader { geometryProxy in
-                
-                
-            
-                ZStack {
-                    Color.yellow
-                
-            Button("Show Shapes"){
-                self.showShapes.toggle()
-            }
-            .frame(height: geometryProxy.size.height / 2)
-            .background(Color.gray)
-            .sheet(isPresented: self.$showShapes) {
-                ShapeGridView()
-                .padding()
-            }
-                }
-            }
-        }
+        BackgroundView()
     }
 }
 
@@ -41,5 +22,6 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView().colorScheme(.light)
+        .environmentObject(CellData())
     }
 }

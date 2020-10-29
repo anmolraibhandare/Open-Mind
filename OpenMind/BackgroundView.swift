@@ -14,11 +14,21 @@ struct BackgroundView: View {
     
     
     var body: some View {
+        let doubleTap = TapGesture(count: 2)
+            .onEnded {
+                print("Double Tap")
+        }
         return ZStack{
+            Color.yellow
+                .edgesIgnoringSafeArea(.all)
             ForEach(self.cellData.cells) { cell in
                 CellView(cell: cell)
             }
-            
+        }
+    .gesture(doubleTap)
+        .onTapGesture {
+            self.cellData.selectedCell = nil
+            self.endTextEditing()
         }
     }
 }
