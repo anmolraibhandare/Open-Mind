@@ -22,6 +22,7 @@
 		2678063D254B6C840088A976 /* ColorSliderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2678063C254B6C840088A976 /* ColorSliderView.swift */; };
 		2678063F254B73330088A976 /* PickedColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2678063E254B73330088A976 /* PickedColor.swift */; };
 		26780641254B73D30088A976 /* ColorPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26780640254B73D30088A976 /* ColorPickerView.swift */; };
+		26780643254B83B50088A976 /* FlyoutMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26780642254B83B50088A976 /* FlyoutMenu.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		2678063C254B6C840088A976 /* ColorSliderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorSliderView.swift; sourceTree = "<group>"; };
 		2678063E254B73330088A976 /* PickedColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickedColor.swift; sourceTree = "<group>"; };
 		26780640254B73D30088A976 /* ColorPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPickerView.swift; sourceTree = "<group>"; };
+		26780642254B83B50088A976 /* FlyoutMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlyoutMenu.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,15 +79,16 @@
 				2678061A254A25DE0088A976 /* AppDelegate.swift */,
 				2678061C254A25DE0088A976 /* SceneDelegate.swift */,
 				2678061E254A25DE0088A976 /* ContentView.swift */,
-				26780630254B465F0088A976 /* Shapes.swift */,
-				26780634254B58A10088A976 /* Model.swift */,
-				2678063C254B6C840088A976 /* ColorSliderView.swift */,
-				26780638254B5B190088A976 /* BackgroundView.swift */,
-				2678063A254B64680088A976 /* Extensions.swift */,
+				26780642254B83B50088A976 /* FlyoutMenu.swift */,
 				26780636254B59EF0088A976 /* CellView.swift */,
+				26780638254B5B190088A976 /* BackgroundView.swift */,
+				2678063C254B6C840088A976 /* ColorSliderView.swift */,
+				26780634254B58A10088A976 /* Model.swift */,
+				26780630254B465F0088A976 /* Shapes.swift */,
+				26780632254B50C40088A976 /* ShapeGridView.swift */,
+				2678063A254B64680088A976 /* Extensions.swift */,
 				2678063E254B73330088A976 /* PickedColor.swift */,
 				26780640254B73D30088A976 /* ColorPickerView.swift */,
-				26780632254B50C40088A976 /* ShapeGridView.swift */,
 				26780620254A25E30088A976 /* Assets.xcassets */,
 				26780625254A25E30088A976 /* LaunchScreen.storyboard */,
 				26780628254A25E30088A976 /* Info.plist */,
@@ -178,6 +181,7 @@
 				2678061D254A25DE0088A976 /* SceneDelegate.swift in Sources */,
 				26780639254B5B190088A976 /* BackgroundView.swift in Sources */,
 				26780633254B50C40088A976 /* ShapeGridView.swift in Sources */,
+				26780643254B83B50088A976 /* FlyoutMenu.swift in Sources */,
 				2678063D254B6C840088A976 /* ColorSliderView.swift in Sources */,
 				26780635254B58A10088A976 /* Model.swift in Sources */,
 				2678061F254A25DE0088A976 /* ContentView.swift in Sources */,
