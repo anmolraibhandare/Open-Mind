@@ -12,19 +12,10 @@ struct ContentView: View {
     
     @EnvironmentObject var cellData: CellData
     @State private var showShapes = false
-    @State private var sliderValue: Double = 0
     
     var body: some View {
-        ZStack {
-            GeometryReader { geometry in
-                BackgroundView(size: geometry.size)
-            }
-            HStack {
-                ColorSliderView(sliderValue: self.$sliderValue, range: -1...1, color: .blue)
-                Text("\(self.sliderValue)")
-            }
-        .padding()
-            .frame(height: 80)
+        GeometryReader { geometry in
+            BackgroundView(size: geometry.size)
         }
     }
 }
