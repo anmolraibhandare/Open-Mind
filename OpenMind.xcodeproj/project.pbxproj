@@ -13,6 +13,7 @@
 		26780621254A25E30088A976 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 26780620254A25E30088A976 /* Assets.xcassets */; };
 		26780624254A25E30088A976 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 26780623254A25E30088A976 /* Preview Assets.xcassets */; };
 		26780627254A25E30088A976 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 26780625254A25E30088A976 /* LaunchScreen.storyboard */; };
+		26780631254B465F0088A976 /* Shapes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26780630254B465F0088A976 /* Shapes.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		26780623254A25E30088A976 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		26780626254A25E30088A976 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		26780628254A25E30088A976 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		26780630254B465F0088A976 /* Shapes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shapes.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				2678061A254A25DE0088A976 /* AppDelegate.swift */,
 				2678061C254A25DE0088A976 /* SceneDelegate.swift */,
 				2678061E254A25DE0088A976 /* ContentView.swift */,
+				26780630254B465F0088A976 /* Shapes.swift */,
 				26780620254A25E30088A976 /* Assets.xcassets */,
 				26780625254A25E30088A976 /* LaunchScreen.storyboard */,
 				26780628254A25E30088A976 /* Info.plist */,
@@ -149,6 +152,7 @@
 				2678061B254A25DE0088A976 /* AppDelegate.swift in Sources */,
 				2678061D254A25DE0088A976 /* SceneDelegate.swift in Sources */,
 				2678061F254A25DE0088A976 /* ContentView.swift in Sources */,
+				26780631254B465F0088A976 /* Shapes.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
